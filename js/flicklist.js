@@ -12,9 +12,12 @@ var flicklistView = new Vue({
 			// Whenever it changes, Vue will automatically re-render
 			// the html for us.
 			watchlistItems: [],
-			browseItems: []
+			browseItems: [],
+			//flick: 'godfather',
 		};
 	},
+
+	
 	methods: {
 		discoverMovies: function () {
 			/**
@@ -26,18 +29,17 @@ var flicklistView = new Vue({
 					.then(resp => resp.ok ? resp.json() : Promise.reject(resp))
 					.then((response) => {
 						console.log("We got a response from The Movie DB!");
-						console.log(response);
+						//console.log(response);
 						// TODO 2
 						// update this.browseItems, setting it equal to the movies we recieved in the response
 						this.browseItems.push(response);
+						console.log(this.browseItems);
 
 					});
 		},
-		addToWatchList: function(flick) {
+		addToWatchList: function(flick, event) {
 			
-			
-			
-				console.log("this is flick:     " + flick);
+				console.log("this is flick:     " + this.flick);
 				this.watchListItems.push(flick)
 		
 		},
