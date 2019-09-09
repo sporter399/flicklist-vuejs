@@ -32,15 +32,15 @@ var flicklistView = new Vue({
 						//console.log(response);
 						// TODO 2
 						// update this.browseItems, setting it equal to the movies we recieved in the response
-						this.browseItems.push(response);
+						this.browseItems = response.results;
 						console.log(this.browseItems);
 
 					});
 		},
 		addToWatchList: function(flick, event) {
 			
-				console.log("this is flick:     " + this.flick);
-				this.watchListItems.push(flick)
+				console.log("this is flick", flick);
+				this.watchlistItems.push(flick)
 		
 		},
 		// TODO 5
