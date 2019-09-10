@@ -22,6 +22,10 @@
       </header>
 
       <ul>
+        <li v-for="flick in watchlistItems">
+          {{flick.title}}
+
+        </li>
         <!--
         TODO 7
         Make an <li> for each movie in watchList
@@ -36,9 +40,9 @@
 
       <ul>
           <li v-for="flick in browseItems">
-              
-             <button @click="addToWatchList(flick)" >Add to watchlist </button> 
-            </li>
+            {{ flick.title }}
+            <button @click="addToWatchList(flick)" >Add to watchlist </button> 
+          </li>
       </ul>
     </section>
 
