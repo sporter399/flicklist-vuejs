@@ -46,6 +46,7 @@ var flicklistView = new Vue({
       // you can use the body of discoverMovies as a jumping off point
     },
 		addToWatchlist: function(movie) {
+			
 			this.watchlistItems.push(movie);
 		},
 	},

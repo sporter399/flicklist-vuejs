@@ -49,10 +49,12 @@
             The button should be disabled if this movie
             is already in the user's watchlist
           -->
-          <button @click="addToWatchlist(movie)">
+          <button :disabled='isDisabled' @click="addToWatchlist(movie)" >
             Add to Watchlist
           </button>
 
+
+          <p>{{movie.overview}}</p>
           <!--
             TODO 1
             Create a paragraph containing the movie object's
