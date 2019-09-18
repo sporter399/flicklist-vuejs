@@ -1,7 +1,7 @@
 
 var api = {
   root: "https://api.themoviedb.org/3",
-  token: "TODO 0"
+  token: "1f8818270d9286eff7c73f743eab9da7"
 }
 
 var flicklistView = new Vue({
@@ -60,6 +60,11 @@ var flicklistView = new Vue({
     },
 		addToWatchlist: function(movie) {
 			this.watchlistItems.push(movie);
+		},
+		removeFromWatchlist: function(movie) {
+			this.watchlistItems.filter(movie => !movie);
+			
+			
 		},
 	},
 	mounted: function () {

@@ -5,8 +5,11 @@ TODO 2c
 Customize the .jumbotron class to have centered text instead of left-aligned
 Also change its bottom margin to 1%
 */
-
-
+.header {
+	font-family: 'Open Sans', sans-serif;
+	align-items: center;
+	margin-bottom: 1%;
+}
 /*
 TODO 2h
 Give the Watchlist items some styles:
